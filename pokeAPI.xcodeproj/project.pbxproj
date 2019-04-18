@@ -13,6 +13,7 @@
 		040E4ABB2269054B0045BF27 /* pokeAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 040E4AB92269054B0045BF27 /* pokeAPI.xcdatamodeld */; };
 		040E4ABD2269054E0045BF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040E4ABC2269054E0045BF27 /* Assets.xcassets */; };
 		040E4AC02269054E0045BF27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040E4ABE2269054E0045BF27 /* LaunchScreen.storyboard */; };
+		040E4AC82269075A0045BF27 /* PokemonExample.json in Resources */ = {isa = PBXBuildFile; fileRef = 040E4AC7226907590045BF27 /* PokemonExample.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		040E4ABC2269054E0045BF27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040E4ABF2269054E0045BF27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		040E4AC12269054E0045BF27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		040E4AC7226907590045BF27 /* PokemonExample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PokemonExample.json; path = ../../../../Downloads/PokemonExample.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				040E4ABE2269054E0045BF27 /* LaunchScreen.storyboard */,
 				040E4AC12269054E0045BF27 /* Info.plist */,
 				040E4AB92269054B0045BF27 /* pokeAPI.xcdatamodeld */,
+				040E4AC7226907590045BF27 /* PokemonExample.json */,
 			);
 			path = pokeAPI;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040E4AC82269075A0045BF27 /* PokemonExample.json in Resources */,
 				040E4AC02269054E0045BF27 /* LaunchScreen.storyboard in Resources */,
 				040E4ABD2269054E0045BF27 /* Assets.xcassets in Resources */,
 				040E4AB82269054B0045BF27 /* Main.storyboard in Resources */,
