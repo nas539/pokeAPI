@@ -13,9 +13,9 @@
 		040E4ABB2269054B0045BF27 /* pokeAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 040E4AB92269054B0045BF27 /* pokeAPI.xcdatamodeld */; };
 		040E4ABD2269054E0045BF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040E4ABC2269054E0045BF27 /* Assets.xcassets */; };
 		040E4AC02269054E0045BF27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040E4ABE2269054E0045BF27 /* LaunchScreen.storyboard */; };
-		040E4AC82269075A0045BF27 /* PokemonExample.json in Resources */ = {isa = PBXBuildFile; fileRef = 040E4AC7226907590045BF27 /* PokemonExample.json */; };
 		041232DA226A031E00225069 /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041232D8226A031E00225069 /* Users+CoreDataClass.swift */; };
 		041232DB226A031E00225069 /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041232D9226A031E00225069 /* Users+CoreDataProperties.swift */; };
+		0458069C226A09C9003B6887 /* PokemonExample.json in Resources */ = {isa = PBXBuildFile; fileRef = 0458069B226A09C9003B6887 /* PokemonExample.json */; };
 		04FB505D2269478000E44358 /* structsForPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB505C2269478000E44358 /* structsForPokemon.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +28,9 @@
 		040E4ABC2269054E0045BF27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040E4ABF2269054E0045BF27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		040E4AC12269054E0045BF27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		040E4AC7226907590045BF27 /* PokemonExample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PokemonExample.json; path = ../../../../Downloads/PokemonExample.json; sourceTree = "<group>"; };
 		041232D8226A031E00225069 /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
 		041232D9226A031E00225069 /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0458069B226A09C9003B6887 /* PokemonExample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PokemonExample.json; sourceTree = "<group>"; };
 		04FB505C2269478000E44358 /* structsForPokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structsForPokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,9 +72,9 @@
 				040E4AB62269054B0045BF27 /* Main.storyboard */,
 				040E4ABC2269054E0045BF27 /* Assets.xcassets */,
 				040E4ABE2269054E0045BF27 /* LaunchScreen.storyboard */,
+				0458069B226A09C9003B6887 /* PokemonExample.json */,
 				040E4AC12269054E0045BF27 /* Info.plist */,
 				040E4AB92269054B0045BF27 /* pokeAPI.xcdatamodeld */,
-				040E4AC7226907590045BF27 /* PokemonExample.json */,
 			);
 			path = pokeAPI;
 			sourceTree = "<group>";
@@ -137,7 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040E4AC82269075A0045BF27 /* PokemonExample.json in Resources */,
+				0458069C226A09C9003B6887 /* PokemonExample.json in Resources */,
 				040E4AC02269054E0045BF27 /* LaunchScreen.storyboard in Resources */,
 				040E4ABD2269054E0045BF27 /* Assets.xcassets in Resources */,
 				040E4AB82269054B0045BF27 /* Main.storyboard in Resources */,
