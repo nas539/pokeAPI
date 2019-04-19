@@ -8,15 +8,6 @@
 
 import UIKit
 
-struct Character: Decodable {
-    
-    let name: String
-    let id: Int
-    
-}
-
-
-
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,17 +18,31 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Poke")
         
-        fetchPokemonJSON { (res) in
-            switch res {
-            case .success(let characters):
-                characters.forEach ({ (character) in
-                    print(character)
-                })
-            case .failure(let err):
-                print("Failure to fetch charcter", err)
-                
-            }
-        }
+        let url = Bundle.main.url(forResource: "PokemonExample", withExtension: "json")
+        
+        print(url)
+        
+        let data = try? Data(contentsOf: url!)
+        
+        print(data)
+        
+        jsonData = try? JSONDecoder().decode(PokeVars.self, from: data!)
+        
+        print(jsonData)
+        
+        tableView.reloadData()
+        
+//        fetchPokemonJSON { (res) in
+//            switch res {
+//            case .success(let characters):
+//                characters.forEach ({ (character) in
+//                    print(character)
+//                })
+//            case .failure(let err):
+//                print("Failure to fetch charcter", err)
+//
+//            }
+//        }
         
     }
     fileprivate func fetchPokemonJSON(completion: @escaping(Result<[Character], Error>) -> ()) {
@@ -74,7 +79,13 @@ class ViewController: UIViewController {
     }
     
 }
-
+extension ViewController : UITableViewDelegate {
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.isSelected = false
+    }
+}
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,7 +93,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell (style: .default, reuseIdentifier: "Poke")
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "Poke")
         
         cell.textLabel?.text = jsonData?.name
         
