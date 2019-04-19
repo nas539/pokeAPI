@@ -16,17 +16,22 @@ struct Character: Decodable {
 }
 
 
+
 class ViewController: UIViewController {
-    @IBOutlet weak var view: UITableView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var jsonData: PokeVars?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Poke")
         
         fetchPokemonJSON { (res) in
             switch res {
             case .success(let characters):
-                .characters.forEach ({ (character) in
-                    print(character.name)
+                characters.forEach ({ (character) in
+                    print(character)
                 })
             case .failure(let err):
                 print("Failure to fetch charcter", err)
@@ -35,37 +40,54 @@ class ViewController: UIViewController {
         }
         
     }
-    fileprivate func fetchPokemonJSON(completion: @escaping(Result<[Character], err>) -> ()) {
+    fileprivate func fetchPokemonJSON(completion: @escaping(Result<[Character], Error>) -> ()) {
+        
+        let url = Bundle.main.url(forResource: "PokemonExample", withExtension: "json")
+        
+        let data = try? Data(contentsOf: url!)
+        
+        jsonData = try? JSONDecoder().decode(PokeVars.self, from: data!)
         
         
-        let urlString = "PokemonExample.json"
-        guard let url = URL(string: urlString) else {return}
-        
-        URLSession.shared.dataTask(with: url) {
-            (data, resp, err) in
-            
-            if let err = err {
-                completion(.failure(err))
-                completion(nil, err)
-                return
-            }
-            do {
-                let characters = try JSONDecoder().decode([Character].self, from: data!)
-                completion(.success(characters))
-                completion(characters, nil)
-                
-            } catch let jsonError{
-                completion(.failure(jsonError))
-                completion(nil, jsonError)
-            }
-            
-            
-            }.resume()
-        
-        
+//        let urlString = "PokemonExample.json"
+//        guard let url = URL(string: urlString) else {return}
+//        URLSession.shared.dataTask(with: url) {
+//            (data, resp, err) in
+//
+//            if let err = err {
+//                completion(.failure(err))
+////                completion(nil, err)
+//                return
+//            }
+//            do {
+//                let characters = try JSONDecoder().decode([Character].self, from: data!)
+//                completion(.success(characters))
+////                completion(characters, nil)
+//
+//            } catch let jsonError{
+//                completion(.failure(jsonError))
+////                completion(nil, jsonError)
+//            }
+//
+//
+//            }.resume()
     }
     
-    @IBOutlet weak var action: UITableView!
 }
 
 
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (jsonData == nil) ? 0 : 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell (style: .default, reuseIdentifier: "Poke")
+        
+        cell.textLabel?.text = jsonData?.name
+        
+        return cell
+    }
+    
+    
+}

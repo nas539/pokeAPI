@@ -29,7 +29,7 @@
                     </view>
                     <connections>
                         <outlet property="action" destination="cqa-XA-D0k" id="CeC-yf-hcF"/>
-                        <outlet property="view" destination="cqa-XA-D0k" id="jpD-BY-tr3"/>
+                        <outlet property="tableView" destination="cqa-XA-D0k" id="jpD-BY-tr3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

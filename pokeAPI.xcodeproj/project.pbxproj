@@ -14,6 +14,7 @@
 		040E4ABD2269054E0045BF27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040E4ABC2269054E0045BF27 /* Assets.xcassets */; };
 		040E4AC02269054E0045BF27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040E4ABE2269054E0045BF27 /* LaunchScreen.storyboard */; };
 		040E4AC82269075A0045BF27 /* PokemonExample.json in Resources */ = {isa = PBXBuildFile; fileRef = 040E4AC7226907590045BF27 /* PokemonExample.json */; };
+		04FB505D2269478000E44358 /* structsForPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FB505C2269478000E44358 /* structsForPokemon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		040E4ABF2269054E0045BF27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		040E4AC12269054E0045BF27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		040E4AC7226907590045BF27 /* PokemonExample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PokemonExample.json; path = ../../../../Downloads/PokemonExample.json; sourceTree = "<group>"; };
+		04FB505C2269478000E44358 /* structsForPokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structsForPokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				040E4AB22269054B0045BF27 /* AppDelegate.swift */,
 				040E4AB42269054B0045BF27 /* ViewController.swift */,
+				04FB505C2269478000E44358 /* structsForPokemon.swift */,
 				040E4AB62269054B0045BF27 /* Main.storyboard */,
 				040E4ABC2269054E0045BF27 /* Assets.xcassets */,
 				040E4ABE2269054E0045BF27 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			files = (
 				040E4AB52269054B0045BF27 /* ViewController.swift in Sources */,
 				040E4ABB2269054B0045BF27 /* pokeAPI.xcdatamodeld in Sources */,
+				04FB505D2269478000E44358 /* structsForPokemon.swift in Sources */,
 				040E4AB32269054B0045BF27 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
